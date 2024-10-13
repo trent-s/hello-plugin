@@ -52,7 +52,7 @@ initialize:
   plugins:
     hello-plugin:
       method: HelloPlugin
-      path: "<name-field-from-package.json>"
+      path: "hello-plugin"
       config:
         ...
 ...
