@@ -1,6 +1,6 @@
-# if-plugin-template
+# hello-plugin
 
-`if-plugin-template` is an environmental impact calculator template which exposes an API for [IF](https://github.com/Green-Software-Foundation/if) to retrieve energy and embodied carbon estimates.
+`hello-plugin` is an environmental impact calculator experiment which exposes an API for [IF](https://github.com/Green-Software-Foundation/if) to retrieve energy and embodied carbon estimates.
 
 ## Implementation
 
@@ -8,13 +8,13 @@ Here can be implementation details of the plugin. For example which API is used,
 
 ## Usage
 
-To run the `<YOUR-CUSTOM-PLUGIN>`, an instance of `PluginFactory` must be created. Then, the plugin's `execute()` method can be called, passing required arguments to it.
+To run the `hello-plugin`, an instance of `PluginFactory` must be created. Then, the plugin's `execute()` method can be called, passing required arguments to it.
 
 This is how you could run the plugin in Typescript:
 
 ```typescript
 async function runPlugin() {
-  const usage = await MyCustomPlugin({}).execute([
+  const usage = await HelloPlugin({}).execute([
     {
       timestamp: '2021-01-01T00:00:00Z',
       duration: '15s',
@@ -50,8 +50,8 @@ description: loads plugin
 tags: null
 initialize:
   plugins:
-    my-custom-plugin:
-      method: MyCustomPlugin
+    hello-plugin:
+      method: HelloPlugin
       path: "<name-field-from-package.json>"
       config:
         ...
@@ -61,15 +61,15 @@ initialize:
 ### Using directly from Github
 
 You can simply push your plugin to the public Github repository and pass the path to it in your manifest.
-For example, for a plugin saved in `github.com/my-repo/my-plugin` you can do the following:
+For example, for a plugin saved in `github.com/trent-s/hello-plugin` you can do the following:
 
 npm install your plugin: 
 
 ```
-npm install -g https://github.com/my-repo/my-plugin
+npm install -g https://github.com/trent-s/hello-plugin
 ```
 
-Then, in your `manifest`, provide the path in the plugin instantiation. You also need to specify which method the plugin instantiates. In this case you are using the `MyCustomPlugin`.
+Then, in your `manifest`, provide the path in the plugin instantiation. You also need to specify which method the plugin instantiates. In this case you are using the `HelloPlugin`.
 
 ```yaml
 name: plugin-demo-git
@@ -77,9 +77,9 @@ description: loads plugin
 tags: null
 initialize:
   plugins:
-    my-custom-plugin:
-      method: MyCustomPlugin
-      path: https://github.com/my-repo/my-plugin
+    hello-plugin:
+      method: HelloPlugin
+      path: https://github.com/trent-s/hello-plugin
       config:
         ...
 ...

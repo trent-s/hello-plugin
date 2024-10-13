@@ -1,7 +1,7 @@
 import {PluginFactory} from '@grnsft/if-core/interfaces';
 import {PluginParams, ConfigParams} from '@grnsft/if-core/types';
 
-export const MyCustomPlugin = PluginFactory({
+export const HelloPlugin = PluginFactory({
   configValidation: (config: ConfigParams) => {
     // do config validation here or just pass zod schema
 
@@ -13,11 +13,11 @@ export const MyCustomPlugin = PluginFactory({
     return input;
   },
   implementation: async (inputs: PluginParams[], config: ConfigParams) => {
-    const {yourValue} = config;
+    const {helloValue} = config;
 
     return inputs.map(input => {
       // your logic here
-      yourValue;
+      helloValue;
 
       return input;
     });

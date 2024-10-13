@@ -1,9 +1,9 @@
-import {MyCustomPlugin} from '../../lib/my-custom-plugin';
+import {HelloPlugin} from '../../lib/hello-plugintest';
 
-describe('lib/my-custom-plugin: ', () => {
-  describe('MyCustomPlugin(): ', () => {
+describe('lib/hello-plugin: ', () => {
+  describe('HelloPlugin(): ', () => {
     it('has metadata field.', () => {
-      const pluginInstance = MyCustomPlugin({}, {}, {});
+      const pluginInstance = HelloPlugin({}, {}, {});
 
       expect(pluginInstance).toHaveProperty('metadata');
       expect(pluginInstance).toHaveProperty('execute');
@@ -12,7 +12,7 @@ describe('lib/my-custom-plugin: ', () => {
 
     describe('execute(): ', () => {
       it('applies logic on provided inputs array.', async () => {
-        const pluginInstance = MyCustomPlugin({}, {}, {});
+        const pluginInstance = HelloPlugin({}, {}, {});
         const inputs = [{}];
 
         const response = await pluginInstance.execute(inputs);
