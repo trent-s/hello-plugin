@@ -1,4 +1,4 @@
-import {HelloPlugin} from '../../lib/hello-plugintest';
+import {HelloPlugin} from '../../lib/hello-plugin';
 
 describe('lib/hello-plugin: ', () => {
   describe('HelloPlugin(): ', () => {
