@@ -46,6 +46,7 @@
   },
   "scripts": {
     "build": "npm run clean && tsc --project tsconfig.build.json",
+    "bumpver": "npm version patch --force && npm publish",
     "clean": "rimraf build/",
     "coverage": "jest --verbose --coverage",
     "fix": "gts fix",
